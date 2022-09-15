@@ -1,0 +1,228 @@
+# ------------------- ASSIGNMENT - 1 - TEACHNOOK --------------------- #
+
+# -------------------Q.1. LISTS, [], mutable ------------------------- #
+my_list = ["shyam", 30, "srithi", 17]
+
+#append
+my_list.append("te amo")
+print(my_list)                  #output  ['shyam', 30, 'srithi', 17, 'te amo']
+
+#update
+my_list[2] = "brilo"
+print(my_list)                  #output  ['shyam', 30, 'brilo', 17, 'te amo']
+
+#insert
+my_list.insert(0, "cristiano")
+my_list.insert(6, "rodriguez")
+print(my_list)                  #output  ['cristiano', 'shyam', 30, 'brilo', 17, 'te amo', 'rodriguez']
+
+#remove
+my_list.remove("te amo")
+print(my_list)                  #output ['cristiano', 'shyam', 30, 'brilo', 17, 'rodriguez']
+
+#pop
+my_list.pop(2)
+my_list.pop(3)
+my_list.pop()
+print(my_list)                  #output  ['cristiano', 'shyam', 'brilo']
+my_list.append("rodriguez")
+
+#extend
+my_list.extend(["coding", "football"])
+print(my_list)                  #output  ['cristiano', 'shyam', 'brilo', 'rodriguez', 'coding', 'football']
+
+#count
+my_list.append("shyam")
+print(my_list.count("shyam"))   #output  2
+
+#remove
+my_list.remove("shyam")
+print(my_list)                  #output  ['cristiano', 'brilo', 'rodriguez', 'coding', 'football', 'shyam']
+
+#delete
+del my_list[4]
+print(my_list)                  #output  ['cristiano', 'brilo', 'rodriguez', 'coding', 'shyam']
+
+#slicing
+del my_list[1:]
+print(my_list)                  #output  ['cristiano']
+my_list.extend(["messi", "neymar", "mbappe", "haalland"])
+print(my_list[:4])              #output  ['cristiano', 'messi', 'neymar', 'mbappe']
+print(my_list[2:4])             #output  ['neymar', 'mbappe']
+print(my_list[1:4:2])           #output  ['neymar', 'mbappe']
+#with negative indexing
+print(my_list[-3:])             #output  ['neymar', 'mbappe', 'haalland']
+print(my_list[-1:-4:-2])        #output  ['haalland', 'neymar']
+print(my_list[0:-1])            #output  ['cristiano', 'messi', 'neymar', 'mbappe']
+print(my_list[-1:-2:-1])        #output  ['haalland']
+print(my_list[-1:-2:1])         #output  []
+
+#reverse
+my_list.reverse()
+print(my_list)                  #output  ['haalland', 'mbappe', 'neymar', 'messi', 'cristiano']
+
+#sort
+my_list.sort()
+print(my_list)                  #output  ['cristiano', 'haalland', 'mbappe', 'messi', 'neymar']
+
+#copy
+your_list = my_list.copy()
+print(your_list)                #output  ['cristiano', 'haalland', 'mbappe', 'messi', 'neymar']
+
+#clear
+my_list.clear()
+print(my_list)                  #output  []
+
+# -------------------------------- LISTS COMPLETED -------------------------------------- #
+
+
+# -----------------------------Q.2. DICTIONARIES, {}, mutable --------------------------- #
+
+my_dict = {"word": "shyam", "number": 45, "boolean": True, "float": 45.7}
+
+print(my_dict["number"])        #output  45
+print(my_dict["boolean"])       #output  True
+
+#update
+my_dict["word"] = "srithi"
+print(my_dict)                  #output  {'word': 'srithi', 'number': 45, 'boolean': True, 'float': 45.7}
+
+#delete
+del my_dict["boolean"]
+print(my_dict)                  #output  {'word': 'srithi', 'number': 45, 'float': 45.7}
+
+#key, value
+print(my_dict.keys())           #output  dict_keys(['word', 'number', 'float'])
+print(my_dict.values())         #output  dict_values(['srithi', 45, 45.7])
+
+#to list
+our_list = list(my_dict)
+print(our_list)                 #poutput  ['word', 'number', 'float']
+value_list = list(my_dict.values())
+print(value_list)               #output  ['srithi', 45, 45.7]
+
+#sort
+print(sorted(my_dict))          #output  ['float', 'number', 'word']
+
+#search
+print('word' in my_dict)        #output  True
+print("srithi" in my_dict.values())     #output  True
+
+#looping
+for key, value in my_dict.items():          #output  word
+                                            #        srithi
+                                            #        number
+                                            #        45
+                                            #        float
+                                            #        45.7
+
+    print(key)
+    print(value)
+print(my_dict)              #output  {'word': 'srithi', 'number': 45, 'float': 45.7}
+
+# --------------------------- DICTIONARIES COMPLETED --------------------------- #
+
+
+# -------------------------Q.3. TUPLES, (), immutable -------------------------- #
+
+my_tuple = (7, 10, 11, 4, "hello")
+print(my_tuple)                     #(7, 10, 11, 4, 'hello')
+
+#upadte which gives error
+#my_tuple[0] = 45                    #TypeError: 'tuple' object does not support item assignment
+
+my_tuple = ([1, 2, 3, 4], ("hello", True, "false"))
+print(my_tuple[0][2])                #output  3
+print(my_tuple[1])                   #output  ('hello', True, 'false')
+
+# -------------------------------- TUPLES COMPLETED ------------------------------- #
+
+
+# ---------------------------Q.4. SETS, {}, immutable ----------------------------- #
+
+my_set = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+print(my_set)                           #output  {'banana', 'apple', 'pear', 'orange'}
+
+
+# my_set[1] = "football"                #output  TypeError: 'set' object does not support item assignment
+# print(my_set)
+
+your_set = {'apple', 'orange', 'apple', 'hello'}
+
+print(my_set & your_set)                #output  {'apple', 'orange'} 👉👉👉 intersection
+print(my_set | your_set)                #output  {'apple', 'orange', 'banana', 'hello', 'pear'} 👉👉👉 union
+print(my_set - your_set)                #output  {'pear', 'banana'}
+print(my_set ^ your_set)                #output  {'hello', 'banana', 'pear'}
+
+#slicing is not allowed in sets
+#print(my_set[2:])                  #TypeError: 'set' object is not subscriptable
+#even printing the individual elements also not allowed
+#print(my_set[1])                   #TypeError: 'set' object is not subscriptable
+
+# ------------------------------- SETS COMPLETED ------------------------------- #
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ******************************* OUTPUTS IN ORDER **************************** #
+
+# ['shyam', 30, 'srithi', 17, 'te amo']
+# ['shyam', 30, 'brilo', 17, 'te amo']
+# ['cristiano', 'shyam', 30, 'brilo', 17, 'te amo', 'rodriguez']
+# ['cristiano', 'shyam', 30, 'brilo', 17, 'rodriguez']
+# ['cristiano', 'shyam', 'brilo']
+# ['cristiano', 'shyam', 'brilo', 'rodriguez', 'coding', 'football']
+# 2
+# ['cristiano', 'brilo', 'rodriguez', 'coding', 'football', 'shyam']
+# ['cristiano', 'brilo', 'rodriguez', 'coding', 'shyam']
+# ['cristiano']
+# ['cristiano', 'messi', 'neymar', 'mbappe']
+# ['neymar', 'mbappe']
+# ['messi', 'mbappe']
+# ['neymar', 'mbappe', 'haalland']
+# ['haalland', 'neymar']
+# ['cristiano', 'messi', 'neymar', 'mbappe']
+# ['haalland']
+# []
+# ['haalland', 'mbappe', 'neymar', 'messi', 'cristiano']
+# ['cristiano', 'haalland', 'mbappe', 'messi', 'neymar']
+# ['cristiano', 'haalland', 'mbappe', 'messi', 'neymar']
+# []
+# 45
+# True
+# {'word': 'srithi', 'number': 45, 'boolean': True, 'float': 45.7}
+# {'word': 'srithi', 'number': 45, 'float': 45.7}
+# dict_keys(['word', 'number', 'float'])
+# dict_values(['srithi', 45, 45.7])
+# ['word', 'number', 'float']
+# ['srithi', 45, 45.7]
+# ['float', 'number', 'word']
+# True
+# True
+# word
+# srithi
+# number
+# 45
+# float
+# 45.7
+# {'word': 'srithi', 'number': 45, 'float': 45.7}
+# (7, 10, 11, 4, 'hello')
+# 3
+# ('hello', True, 'false')
+# {'apple', 'orange', 'pear', 'banana'}
+# {'apple', 'orange'}
+# {'apple', 'hello', 'pear', 'banana', 'orange'}
+# {'pear', 'banana'}
+# {'hello', 'pear', 'banana'}
