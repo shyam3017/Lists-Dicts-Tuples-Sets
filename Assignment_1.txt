@@ -172,7 +172,9 @@ Due to this, frozen sets can be used as keys in Dictionary or as elements of ano
 
 mylist = {'apple', 'banana', 'cherry'}
 x = frozenset(mylist)
-print(x)                                  #output  frozenset({'cherry', 'apple', 'banana'})                
+print(x)                                  #output  frozenset({'cherry', 'apple', 'banana'})
+
+# ---------------------------------- FROZENSET COMPLETED --------------------------------- #
 
 
 
