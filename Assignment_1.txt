@@ -161,6 +161,18 @@ print(my_set ^ your_set)                #output  {'hello', 'banana', 'pear'}
 
 # ------------------------------- SETS COMPLETED ------------------------------- #
 
+# ------------------------------- FROZENSET ------------------------------------ #
+
+"""Frozen set is just an immutable version of a Python set object. 
+While elements of a set can be modified at any time, 
+elements of the frozen set remain the same after creation. 
+Due to this, frozen sets can be used as keys in Dictionary or as elements of another set"""
+
+
+
+mylist = {'apple', 'banana', 'cherry'}
+x = frozenset(mylist)
+print(x)                                  #output  frozenset({'cherry', 'apple', 'banana'})                
 
 
 
@@ -226,3 +238,4 @@ print(my_set ^ your_set)                #output  {'hello', 'banana', 'pear'}
 # {'apple', 'hello', 'pear', 'banana', 'orange'}
 # {'pear', 'banana'}
 # {'hello', 'pear', 'banana'}
+# frozenset({'cherry', 'apple', 'banana'})
